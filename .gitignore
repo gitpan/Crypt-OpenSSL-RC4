@@ -3,3 +3,10 @@ RC4.bs
 RC4.c
 MANIFEST
 META.yml
+RC4.o
+blib/
+pm_to_blib
+_build/
+Build
+*.bak
+*.sw[po]

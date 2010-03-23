@@ -1,5 +1,9 @@
 Revision history for Perl extension Crypt::OpenSSL::RC4
 
+0.03
+
+        - siwitched to M::B for Solaris.
+
 0.02
 
         - initial release to cpan
