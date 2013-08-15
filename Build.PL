@@ -1,7 +1,6 @@
 use 5.008001;
 use strict;
-use Module::Build;
-use lib qw(inc);
+use Module::Build 0.4004;
 use Devel::CheckLib;
 
 check_lib_or_exit(
@@ -10,16 +9,28 @@ check_lib_or_exit(
 
 my $build = Module::Build->new(
     module_name          => 'Crypt::OpenSSL::RC4',
-    build_requires       => { 'Test::More' => 0, },
-    requries             => {},
+    configure_requires       => {
+        'Devel::CheckLib' => '0.99',
+        'Module::Build'   => '0.4004',
+    },
+    test_requires       => {
+        'Test::More' => '0.98',
+    },
+    requries             => {
+        'XSLoader' => 0,
+    },
     recommends           => {},
     recursive_test_files => 1,
     sign                 => 0,
     create_license       => 1,
-    license              => 'artistic_2',
+    license              => 'perl',
     extra_linker_flags   => '-lcrypto',
     c_source             => './lib/Crypt/OpenSSL/',
-    dist_author          => 'Tokuhiro Matsuno <tokuhirom gmail.com>',
+    meta_merge => {
+        resources => {
+            repository => 'https://github.com/tokuhirom/Crypt-OpenSSL-RC4',
+        },
+    },
 );
 $build->create_build_script;
 

@@ -2,19 +2,11 @@ package Crypt::OpenSSL::RC4;
 use strict;
 use warnings;
 use Exporter 'import';
-our $VERSION = '0.03';
-our @ISA;
+our $VERSION = '0.04';
 our @EXPORT = qw/RC4/;
 
-eval {
-    require XSLoader;
-    XSLoader::load(__PACKAGE__, $VERSION);
-    1;
-} or do {
-    require DynaLoader;
-    push @ISA, 'DynaLoader';
-    __PACKAGE__->bootstrap($VERSION);
-};
+use XSLoader;
+XSLoader::load(__PACKAGE__, $VERSION);
 
 sub RC4 {
     if (ref $_[0]) {

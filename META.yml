@@ -1,14 +1,15 @@
 ---
 abstract: 'RC4 library based on OpenSSL'
 author:
-  - 'Tokuhiro Matsuno <tokuhirom gmail.com>'
+  - unknown
 build_requires:
   ExtUtils::CBuilder: 0
-  Test::More: 0
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3603'
-license: artistic_2
+  Devel::CheckLib: 0.99
+  Module::Build: 0.4004
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.131560'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -16,7 +17,10 @@ name: Crypt-OpenSSL-RC4
 provides:
   Crypt::OpenSSL::RC4:
     file: lib/Crypt/OpenSSL/RC4.pm
-    version: 0.03
+    version: 0.04
 resources:
-  license: http://www.perlfoundation.org/artistic_license_2_0
-version: 0.03
+  license: http://dev.perl.org/licenses/
+  repository: https://github.com/tokuhirom/Crypt-OpenSSL-RC4
+version: 0.04
+x_test_requires:
+  Test::More: 0.98

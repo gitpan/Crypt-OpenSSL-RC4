@@ -1,13 +1,12 @@
-.gitignore
 author/benchmark.pl
 Build.PL
 Changes
-inc/Devel/CheckLib.pm
 lib/Crypt/OpenSSL/ppport.h
 lib/Crypt/OpenSSL/RC4.pm
 lib/Crypt/OpenSSL/RC4.xs
 LICENSE
 MANIFEST			This list of files
+META.json
 META.yml
 README
 t/00_compile.t
